@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 
 /**
  * _pow_recursion - return the value of x rasied to the power of y
@@ -15,3 +15,4 @@ int _pow_recursion(int x, int y)
 		return (1);
 	return (x * _pow_recursion(x, y - 1));
 }
+
