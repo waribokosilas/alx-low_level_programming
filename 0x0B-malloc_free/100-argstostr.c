@@ -1,4 +1,4 @@
-i#include <stdlib.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -21,4 +21,16 @@ char *argstostr(int ac, char **av)
 			;
 		len += c + 1;
 	}
-
+	p = malloc(len + 1);
+	if (p != NULL)
+	{
+		for (r = 0; r < ac; r++)
+		{
+			for (c = 0; av[r][c]; c++, i++)
+				p[i] = av[r][c];
+			p[i++] = '\n';
+		}
+		p[i] = '\0';
+	}
+	return (p);
+}
